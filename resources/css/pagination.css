@@ -1,0 +1,32 @@
+.pages {
+	display: flex;
+	font-size: 15px;
+	gap: 5px;
+	margin-top: 20px;
+	padding: 0 30px;
+}
+
+.pages a {
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	height: 25px;
+	line-height: 1;
+	padding-top: 2px;
+	text-align: center;
+	text-decoration: none;
+	width: 25px;
+}
+
+.pages a:hover {
+	border-color: #666f75;
+	transition: border-color 0.2s ease-out;
+}
+
+.total {
+	color: #666f75;
+	font-size: 15px;
+	margin-top: auto;
+	padding: 20px 30px 0;
+}

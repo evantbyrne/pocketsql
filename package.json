@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "esbuild resources/css/index.css --bundle --minify --outdir=static && esbuild resources/js/*.js --bundle --minify --outdir=static"
+  },
+  "devDependencies": {
+    "@hotwired/turbo": "8.0.12",
+    "esbuild": "0.24.0"
+  }
+}

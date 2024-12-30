@@ -1,0 +1,21 @@
+<div class="crumbs">
+	<h2>Tables</h2>
+	<h3>{{ .table }}</h3>
+</div>
+<form class="query" action="/query" method="post">
+	<textarea placeholder="sql" rows="1" name="sql" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false">{{ .sql }}</textarea>
+	<input type="submit" value="submit" />
+	<div id="error_sql"></div>
+</form>
+<div class="total">
+	{{ if not .execErr }}
+		{{ if .rowsAffectedValid }}
+			Rows: {{ .rowsAffected }}
+		{{ end }}
+		{{ if .lastInsertIdValid }}
+			Last Insert ID: {{ .lastInsertId }}
+		{{ end }}
+	{{ else }}
+		Error: {{ .execErr }}
+	{{ end }}
+</div>

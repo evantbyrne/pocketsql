@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="turbo-refresh-method" content="morph" />
+<title>Pocket SQL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+<link href="/static/index.css" rel="stylesheet" />
+<script src="/static/head.js"></script>
+</head>
+<body>
+<div class="app">
+<header>
+	<h1><span>Pocket SQL</span></h1>
+	<nav>
+		{{ range $link := .links }}
+		{{ $label := index $link "label" }}
+		{{ $url := index $link "url" }}
+		<a href="{{ $url }}"{{ if index $link "active" }} class="-active"{{ end }}>{{ $label }}</a>
+		{{ end }}
+	</nav>
+</header>
+<main id="main">

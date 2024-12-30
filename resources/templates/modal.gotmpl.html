@@ -1,0 +1,17 @@
+<div id="modals">
+	{{ range $modal := .modals }}
+	<div class="modal" id="{{ $modal.id }}">
+		<div class="modal_close" aria-label="close" tabindex="0">✕</div>
+		<div class="modal_content">
+			<h4>View <b>{{ $modal.table }}</b> record</h4>
+			<dl>
+				{{ range $detail := $modal.details }}
+				<dt>{{ $detail.name }}</dt>
+				<dd><pre>{{ $detail.value }}</pre></dd>
+				{{ end }}
+			</dl>
+		</div>
+	</div>
+	{{ end }}
+	<div class="shade"></div>
+</div>

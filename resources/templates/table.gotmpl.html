@@ -1,0 +1,43 @@
+<div class="crumbs">
+	<h2>Tables</h2>
+	<h3>{{ .table }}</h3>
+</div>
+<form class="query" action="/query" method="post">
+	<textarea placeholder="sql" rows="1" name="sql" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false">{{ .sql }}</textarea>
+	<input type="submit" value="submit" />
+	<div id="error_sql"></div>
+</form>
+<table>
+<tr>
+{{ range $col := .headers }}
+	<th><a href="?order={{ $col }}{{ if and (eq $.order $col) (eq $.direction "asc") }}&direction=desc{{ end }}">
+		{{ $col }}
+		{{ if and (eq $.order $col) (eq $.direction "desc") }}↓{{ else if and (eq $.order $col) (eq $.direction "asc") }}↑{{ end }}
+	</a></th>
+{{ end }}
+</tr>
+{{ range $row := .rows }}
+<tr{{ if $row.modal_id }} data-modal-id="{{ $row.modal_id }}"{{ end }} tabindex="0">
+	{{ range $col := $.headers }}
+	<td><span>{{ index $row $col }}</span></td>
+	{{ end }}
+</tr>
+{{ end }}
+</table>
+{{ if (or .prev .next) }}
+<div class="pages">
+	{{ if .prev }}
+		<a href="{{ .prev }}">←</a>
+	{{ end }}
+	{{ if .next }}
+		<a href="{{ .next }}">→</a>
+	{{ end }}
+</div>
+{{ end }}
+<div class="total">
+	{{ if eq .count 0 }}
+		Showing no records
+	{{ else }}
+		Showing {{ .start }}-{{ .end }} of {{ .count }} records
+	{{ end }}
+</div>
