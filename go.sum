@@ -6,8 +6,8 @@ github.com/alecthomas/kong v1.4.0 h1:UL7tzGMnnY0YRMMvJyITIRX1EpO6RbBRZDNcCevy3HA
 github.com/alecthomas/kong v1.4.0/go.mod h1:p2vqieVMeTAnaC83txKtXe8FLke2X07aruPWXyMPQrU=
 github.com/alecthomas/repr v0.4.0 h1:GhI2A8MACjfegCPVq9f1FLvIBS+DrQ2KQBFZP1iFzXc=
 github.com/alecthomas/repr v0.4.0/go.mod h1:Fr0507jx4eOXV7AlPV6AVZLYrLIuIeSOWtW57eE/O/4=
-github.com/evantbyrne/trance v0.0.2 h1:GUPgPYBRQUHm0HyXyyBiRUWiSGRzFZxSWVFi8R2xIFQ=
-github.com/evantbyrne/trance v0.0.2/go.mod h1:45qbihmjrjoZsysg362IOPnn5kVrUIySnTRcXk/QCGM=
+github.com/evantbyrne/trance v0.0.3 h1:Zx8VQPWpz1rSCgD0DjqrpaBkgLCxvukJ7Ytz3AnXNbE=
+github.com/evantbyrne/trance v0.0.3/go.mod h1:45qbihmjrjoZsysg362IOPnn5kVrUIySnTRcXk/QCGM=
 github.com/hexops/gotextdiff v1.0.3 h1:gitA9+qJrrTCsiCl7+kh75nPqQt1cx4ZkudSTLoUqJM=
 github.com/hexops/gotextdiff v1.0.3/go.mod h1:pSWU5MAI3yDq+fZBTazCSJysOMbxWL1BSow5/V2vxeg=
 github.com/mattn/go-sqlite3 v1.14.24 h1:tpSp2G2KyMnnQu99ngJ47EIkWVmliIizyZBfPrBWDRM=

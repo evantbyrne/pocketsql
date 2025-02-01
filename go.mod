@@ -1,10 +1,10 @@
 module github.com/evantbyrne/pocketsql
 
-go 1.23.4
+go 1.23.5
 
 require (
 	github.com/alecthomas/kong v1.4.0
-	github.com/evantbyrne/trance v0.0.2
+	github.com/evantbyrne/trance v0.0.3
 	github.com/mattn/go-sqlite3 v1.14.24
 )
 

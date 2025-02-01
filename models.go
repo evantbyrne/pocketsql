@@ -1,6 +1,10 @@
 package pocketsql
 
-import "database/sql"
+import (
+	"database/sql"
+
+	"github.com/evantbyrne/trance"
+)
 
 type sqlitePragmaTableInfo struct {
 	Cid       string         `@:"cid"`
@@ -20,4 +24,8 @@ type sqlitePragmaTableList struct {
 	NCol   int    `@:"ncol"`
 	Wr     int    `@:"wr"`
 	Strict int    `@:"strict"`
+}
+
+func (sqlitePragmaTableList) WeaveConfig() trance.WeaveConfig {
+	return trance.WeaveConfig{Table: "pragma_table_list"}
 }

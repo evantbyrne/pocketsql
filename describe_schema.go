@@ -27,7 +27,8 @@ func describeSchema(strand *trance.Strand) error {
 func describeSchemaSqlite() ([]map[string]any, error) {
 	links := []map[string]any{}
 	err := trance.Query[sqlitePragmaTableList]().
-		SqlAll("select * from pragma_table_list order by name").
+		Sort("name").
+		All().
 		Then(func(tables []*sqlitePragmaTableList) error {
 			for _, table := range tables {
 				links = append(links, map[string]any{
